@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}Wheather{% endblock title %}
+
+{% block content %}
+    <br>
+    <form>
+        <input type="text" id="city" class="form-control" name="city" placeholder="Moscow">
+        <input type="submit" name="send" value="Click" class="mt-2 btn btn-danger">
+    </form>
+    <h1>Wheather info:</h1>
+    <div>
+        <h2>{{ wheather.city }}: {{ wheather.temperature }} °C</h2>
+        <h5>{{ wheather.created_at }}</h5>
+    </div>  
+{% endblock content %}
